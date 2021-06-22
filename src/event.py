@@ -1,4 +1,4 @@
-"""Event module to operate with Merlin dynamic events.
+"""Event module to operate with Ml dynamic events.
 
 SuperClass from which to build functionalities
 on inherited classes for the different works ahead.
@@ -12,7 +12,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 
 import dsp
-import jplot
 import settings
 
 logger = logging.getLogger(__name__)
@@ -69,7 +68,7 @@ class Event():
     # Data input output
 
     def load_data(self, dropna=False):
-        """Load Merlin dynamic database.
+        """Load Ml dynamic database.
 
         Args:
             dropna (bool, optional): delete empty channels from db.
@@ -78,7 +77,7 @@ class Event():
             FileNotFoundError: if file no found.
             ValueError: if wrong data on file.
         """
-        # Load data, delete Merlin index, get number of channels, add
+        # Load data, delete Ml index, get number of channels, add
         df = pd.read_csv(self.file_path, header=None, index_col=0, dtype='float64')
 
         cols = df.shape[1]
@@ -107,7 +106,7 @@ class Event():
         logger.info(f'{self} load info')
 
     def export(self, directory, fname=None):
-        """Export data as Merlin dynamic database."""
+        """Export data as Ml dynamic database."""
         if not fname:
             try:
                 fname = self.dt_0.strftime('%Y.%m.%d_%H.%M.%S') + '.txt'
@@ -123,7 +122,7 @@ class Event():
         """Set event data as attribute.
 
         Args:
-            df (pd.DataFrame): Merlin event format df.
+            df (pd.DataFrame): Ml event format df.
 
         Raises:
             ValueError: if wrong format df passed.
@@ -618,7 +617,7 @@ def concat(events, max_gap=3600):
 
 def main():
     a = 8
-    print("Nothing done")
+    print("Nothing done Jone")
 
 
 if __name__ == '__main__':

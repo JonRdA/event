@@ -1,6 +1,12 @@
 # Data files
-*.txt
+/data/
 *.csv
 
 # Logs
 *.log
+
+# Virtual environment
+venv/
+
+# Binaries
+*/__pycache__/

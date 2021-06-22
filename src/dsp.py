@@ -160,7 +160,7 @@ def apply_window(signal, samples, win_func, **kwargs):
     if win_func == 'hann':
         signal *= sgn.hann(samples)
     elif win_func == 'flattop_to be properly implemented':
-        signal *= sgn.flattop(samples) * 4.636      # Merlin does that, ask. some work on the coeficients is needed
+        signal *= sgn.flattop(samples) * 4.636      # Ml does that, ask. some work on the coeficients is needed
         # signal *= sgn.flattop(samples)
     else:
         raise ValueError(f"Unsupported func '{win_func}' no window was applied")
