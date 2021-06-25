@@ -6,7 +6,7 @@
 *.log
 
 # Virtual environment
-venv/
+.venv/
 
 # Binaries
 */__pycache__/
